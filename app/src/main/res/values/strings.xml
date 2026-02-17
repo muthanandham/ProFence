@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ProFence</string>
+    <string name="title_activity_main">ProFence</string>
+    <string name="notification_channel_name">ProFence Alerts</string>
+    <string name="notification_channel_desc">Notifications for Geofence entry and exit</string>
+</resources>
