@@ -1,0 +1,22 @@
+
+X main Android Build · 22096900543
+Triggered via push about 5 minutes ago
+
+X build in 3m10s (ID 63856235764)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ set up JDK 17
+  ✓ Grant execute permission for gradlew
+  X Build with Gradle
+  - Upload APK
+  ✓ Post set up JDK 17
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+
+ANNOTATIONS
+X Process completed with exit code 1.
+build: .github#98
+
+
+To see the logs for the failed steps, try: gh run view --log-failed --job=63856235764
+View this run on GitHub: https://github.com/muthanandham/ProFence/actions/runs/22096900543

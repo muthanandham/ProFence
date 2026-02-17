@@ -22,6 +22,7 @@ import com.google.accompanist.permissions.rememberPermissionState
 fun PermissionFlow(
     onPermissionsGranted: () -> Unit
 ) {
+    // 1. Foreground Location
     val foregroundPermissions = rememberMultiplePermissionsState(
         permissions = listOf(
             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -29,102 +30,75 @@ fun PermissionFlow(
         )
     )
 
-    if (foregroundPermissions.allPermissionsGranted) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            BackgroundLocationPermission(onGranted = {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                    NotificationPermission(onGranted = onPermissionsGranted)
-                } else {
-                    onPermissionsGranted()
-                }
-            })
-        } else {
-            onPermissionsGranted()
-        }
-    } else {
-        Column(
-            modifier = Modifier.fillMaxSize().padding(32.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = "Location Access Needed",
-                style = MaterialTheme.typography.headlineMedium,
-                textAlign = TextAlign.Center
+    if (!foregroundPermissions.allPermissionsGranted) {
+        PermissionRequestScreen(
+            title = "Location Access Needed",
+            message = "ProFence needs your location to detect when you enter or leave geofences. Please grant 'While using the app' access.",
+            buttonText = "Grant Location Access",
+            onClick = { foregroundPermissions.launchMultiplePermissionRequest() }
+        )
+        return
+    }
+
+    // 2. Background Location (Only for Android 10/Q+)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        val backgroundPermission = rememberPermissionState(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
+        if (!backgroundPermission.status.isGranted) {
+            PermissionRequestScreen(
+                title = "Background Location Required",
+                message = "To detect geofences even when the app is closed, you must select 'Allow all the time' in settings.",
+                buttonText = "Open Settings",
+                onClick = { backgroundPermission.launchPermissionRequest() }
             )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                "ProFence needs your location to detect when you enter or leave geofences. Please grant 'While using the app' access.",
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(24.dp))
-            Button(onClick = { foregroundPermissions.launchMultiplePermissionRequest() }) {
-                Text("Grant Location Access")
-            }
+            return
         }
+    }
+
+    // 3. Notifications (Only for Android 13/Tiramisu+)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+        val notificationPermission = rememberPermissionState(Manifest.permission.POST_NOTIFICATIONS)
+        if (!notificationPermission.status.isGranted) {
+            PermissionRequestScreen(
+                title = "Notifications",
+                message = "ProFence needs permission to send you alerts when you cross a geofence.",
+                buttonText = "Allow Notifications",
+                onClick = { notificationPermission.launchPermissionRequest() }
+            )
+            return
+        }
+    }
+
+    // All granted
+    LaunchedEffect(Unit) {
+        onPermissionsGranted()
     }
 }
 
-@OptIn(ExperimentalPermissionsApi::class)
-@RequiresApi(Build.VERSION_CODES.Q)
 @Composable
-fun BackgroundLocationPermission(onGranted: () -> Unit) {
-    val backgroundPermission = rememberPermissionState(Manifest.permission.ACCESS_BACKGROUND_LOCATION)
-
-    if (backgroundPermission.status.isGranted) {
-        onGranted()
-    } else {
-        Column(
-            modifier = Modifier.fillMaxSize().padding(32.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                "Background Location Required",
-                style = MaterialTheme.typography.headlineMedium,
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                "To detect geofences even when the app is closed, you must select 'Allow all the time' in settings.",
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(24.dp))
-            Button(onClick = { backgroundPermission.launchPermissionRequest() }) {
-                Text("Open Settings")
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalPermissionsApi::class)
-@RequiresApi(Build.VERSION_CODES.TIRAMISU)
-@Composable
-fun NotificationPermission(onGranted: () -> Unit) {
-    val notificationPermission = rememberPermissionState(Manifest.permission.POST_NOTIFICATIONS)
-
-    if (notificationPermission.status.isGranted) {
-        onGranted()
-    } else {
-        Column(
-            modifier = Modifier.fillMaxSize().padding(32.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                "Notifications",
-                style = MaterialTheme.typography.headlineMedium,
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-            Text(
-                "ProFence needs permission to send you alerts when you cross a geofence.",
-                textAlign = TextAlign.Center
-            )
-            Spacer(modifier = Modifier.height(24.dp))
-            Button(onClick = { notificationPermission.launchPermissionRequest() }) {
-                Text("Allow Notifications")
-            }
+fun PermissionRequestScreen(
+    title: String,
+    message: String,
+    buttonText: String,
+    onClick: () -> Unit
+) {
+    Column(
+        modifier = Modifier.fillMaxSize().padding(32.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.headlineMedium,
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = message,
+            textAlign = TextAlign.Center
+        )
+        Spacer(modifier = Modifier.height(24.dp))
+        Button(onClick = onClick) {
+            Text(buttonText)
         }
     }
 }

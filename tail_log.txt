@@ -1,0 +1,257 @@
+build	Set up job	﻿2026-02-17T11:35:19.4682316Z Current runner version: '2.331.0'
+build	Set up job	2026-02-17T11:35:19.4708650Z ##[group]Runner Image Provisioner
+build	Set up job	2026-02-17T11:35:19.4709586Z Hosted Compute Agent
+build	Set up job	2026-02-17T11:35:19.4710197Z Version: 20260123.484
+build	Set up job	2026-02-17T11:35:19.4710826Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+build	Set up job	2026-02-17T11:35:19.4711498Z Build Date: 2026-01-23T19:41:17Z
+build	Set up job	2026-02-17T11:35:19.4712251Z Worker ID: {3fad1fb4-bcc6-41b9-8f9d-51915139dfde}
+build	Set up job	2026-02-17T11:35:19.4712961Z Azure Region: westus
+build	Set up job	2026-02-17T11:35:19.4713515Z ##[endgroup]
+build	Set up job	2026-02-17T11:35:19.4715024Z ##[group]Operating System
+build	Set up job	2026-02-17T11:35:19.4715653Z Ubuntu
+build	Set up job	2026-02-17T11:35:19.4716143Z 24.04.3
+build	Set up job	2026-02-17T11:35:19.4716819Z LTS
+build	Set up job	2026-02-17T11:35:19.4717515Z ##[endgroup]
+build	Set up job	2026-02-17T11:35:19.4718007Z ##[group]Runner Image
+build	Set up job	2026-02-17T11:35:19.4718565Z Image: ubuntu-24.04
+build	Set up job	2026-02-17T11:35:19.4719120Z Version: 20260209.23.1
+build	Set up job	2026-02-17T11:35:19.4720121Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260209.23/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-02-17T11:35:19.4721823Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260209.23
+build	Set up job	2026-02-17T11:35:19.4722730Z ##[endgroup]
+build	Set up job	2026-02-17T11:35:19.4723892Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-02-17T11:35:19.4725934Z Contents: read
+build	Set up job	2026-02-17T11:35:19.4726570Z Metadata: read
+build	Set up job	2026-02-17T11:35:19.4727360Z Packages: read
+build	Set up job	2026-02-17T11:35:19.4727857Z ##[endgroup]
+build	Set up job	2026-02-17T11:35:19.4730049Z Secret source: Actions
+build	Set up job	2026-02-17T11:35:19.4730832Z Prepare workflow directory
+build	Set up job	2026-02-17T11:35:19.5077965Z Prepare all required actions
+build	Set up job	2026-02-17T11:35:19.5117302Z Getting action download info
+build	Set up job	2026-02-17T11:35:19.9516348Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	Set up job	2026-02-17T11:35:20.1041119Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+build	Set up job	2026-02-17T11:35:20.7548672Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-02-17T11:35:20.9858458Z Complete job name: build
+build	Run actions/checkout@v4	﻿2026-02-17T11:35:21.0602463Z ##[group]Run actions/checkout@v4
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0603658Z with:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0604137Z   repository: muthanandham/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0604881Z   token: ***
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0605301Z   ssh-strict: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0605731Z   ssh-user: git
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0606165Z   persist-credentials: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0606902Z   clean: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0607441Z   sparse-checkout-cone-mode: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0607965Z   fetch-depth: 1
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0608388Z   fetch-tags: false
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0608830Z   show-progress: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0609275Z   lfs: false
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0609700Z   submodules: false
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0610150Z   set-safe-directory: true
+build	Run actions/checkout@v4	2026-02-17T11:35:21.0610941Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1718794Z Syncing repository: muthanandham/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1720695Z ##[group]Getting Git version info
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1721455Z Working directory is '/home/runner/work/ProFence/ProFence'
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1722493Z [command]/usr/bin/git version
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1729346Z git version 2.52.0
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1755234Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1770153Z Temporarily overriding HOME='/home/runner/work/_temp/f4ceb126-5a26-4c4d-9b37-6741d5034e0f' before making global git config changes
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1772444Z Adding repository directory to the temporary git global config as a safe directory
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1783459Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ProFence/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1832166Z Deleting the contents of '/home/runner/work/ProFence/ProFence'
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1836986Z ##[group]Initializing the repository
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1842139Z [command]/usr/bin/git init /home/runner/work/ProFence/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1979850Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1981617Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1982943Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1983687Z hint: call:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1984189Z hint:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1985389Z hint: 	git config --global init.defaultBranch <name>
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1986060Z hint:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1987091Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1988763Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1990080Z hint:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1990823Z hint: 	git branch -m <name>
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1991643Z hint:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1992770Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Run actions/checkout@v4	2026-02-17T11:35:21.1994558Z Initialized empty Git repository in /home/runner/work/ProFence/ProFence/.git/
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2000700Z [command]/usr/bin/git remote add origin https://github.com/muthanandham/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2041079Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2042399Z ##[group]Disabling automatic garbage collection
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2045400Z [command]/usr/bin/git config --local gc.auto 0
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2076909Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2078222Z ##[group]Setting up auth
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2084751Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2118142Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2516098Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2550432Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2789317Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Run actions/checkout@v4	2026-02-17T11:35:21.2822738Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Run actions/checkout@v4	2026-02-17T11:35:21.3071850Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Run actions/checkout@v4	2026-02-17T11:35:21.3108742Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.3119551Z ##[group]Fetching the repository
+build	Run actions/checkout@v4	2026-02-17T11:35:21.3121982Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +63aee54881cf671a755520bcaa595f7b519b2d8d:refs/remotes/origin/main
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7227659Z From https://github.com/muthanandham/ProFence
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7228859Z  * [new ref]         63aee54881cf671a755520bcaa595f7b519b2d8d -> origin/main
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7265813Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7266558Z ##[group]Determining the checkout info
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7268739Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7273915Z [command]/usr/bin/git sparse-checkout disable
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7318847Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7346886Z ##[group]Checking out the ref
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7350908Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7446017Z Switched to a new branch 'main'
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7448210Z branch 'main' set up to track 'origin/main'.
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7456226Z ##[endgroup]
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7494231Z [command]/usr/bin/git log -1 --format=%H
+build	Run actions/checkout@v4	2026-02-17T11:35:21.7517851Z 63aee54881cf671a755520bcaa595f7b519b2d8d
+build	set up JDK 17	﻿2026-02-17T11:35:21.7796132Z ##[group]Run actions/setup-java@v4
+build	set up JDK 17	2026-02-17T11:35:21.7796905Z with:
+build	set up JDK 17	2026-02-17T11:35:21.7797304Z   java-version: 17
+build	set up JDK 17	2026-02-17T11:35:21.7797718Z   distribution: temurin
+build	set up JDK 17	2026-02-17T11:35:21.7798149Z   cache: gradle
+build	set up JDK 17	2026-02-17T11:35:21.7798552Z   java-package: jdk
+build	set up JDK 17	2026-02-17T11:35:21.7798977Z   check-latest: false
+build	set up JDK 17	2026-02-17T11:35:21.7799397Z   server-id: github
+build	set up JDK 17	2026-02-17T11:35:21.7800046Z   server-username: GITHUB_ACTOR
+build	set up JDK 17	2026-02-17T11:35:21.7800535Z   server-password: GITHUB_TOKEN
+build	set up JDK 17	2026-02-17T11:35:21.7801016Z   overwrite-settings: true
+build	set up JDK 17	2026-02-17T11:35:21.7801483Z   job-status: success
+build	set up JDK 17	2026-02-17T11:35:21.7802062Z   token: ***
+build	set up JDK 17	2026-02-17T11:35:21.7802447Z ##[endgroup]
+build	set up JDK 17	2026-02-17T11:35:21.9963761Z ##[group]Installed distributions
+build	set up JDK 17	2026-02-17T11:35:22.0241104Z Resolved Java 17.0.18+8 from tool-cache
+build	set up JDK 17	2026-02-17T11:35:22.0242412Z Setting Java 17.0.18+8 as the default
+build	set up JDK 17	2026-02-17T11:35:22.0255629Z Creating toolchains.xml for JDK version 17 from temurin
+build	set up JDK 17	2026-02-17T11:35:22.0332955Z Writing to /home/runner/.m2/toolchains.xml
+build	set up JDK 17	2026-02-17T11:35:22.0333923Z 
+build	set up JDK 17	2026-02-17T11:35:22.0334350Z Java configuration:
+build	set up JDK 17	2026-02-17T11:35:22.0335650Z   Distribution: temurin
+build	set up JDK 17	2026-02-17T11:35:22.0336584Z   Version: 17.0.18+8
+build	set up JDK 17	2026-02-17T11:35:22.0338090Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	set up JDK 17	2026-02-17T11:35:22.0339140Z 
+build	set up JDK 17	2026-02-17T11:35:22.0340107Z ##[endgroup]
+build	set up JDK 17	2026-02-17T11:35:22.0357361Z Creating settings.xml with server-id: github
+build	set up JDK 17	2026-02-17T11:35:22.0364184Z Writing to /home/runner/.m2/settings.xml
+build	set up JDK 17	2026-02-17T11:35:22.3609370Z gradle cache is not found
+build	Grant execute permission for gradlew	﻿2026-02-17T11:35:22.3764658Z ##[group]Run chmod +x gradlew
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3766129Z [36;1mchmod +x gradlew[0m
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3828455Z shell: /usr/bin/bash -e {0}
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3829661Z env:
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3831038Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3833355Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Grant execute permission for gradlew	2026-02-17T11:35:22.3835189Z ##[endgroup]
+build	Build with Gradle	﻿2026-02-17T11:35:22.4108955Z ##[group]Run ./gradlew assembleDebug
+build	Build with Gradle	2026-02-17T11:35:22.4110223Z [36;1m./gradlew assembleDebug[0m
+build	Build with Gradle	2026-02-17T11:35:22.4164918Z shell: /usr/bin/bash -e {0}
+build	Build with Gradle	2026-02-17T11:35:22.4165927Z env:
+build	Build with Gradle	2026-02-17T11:35:22.4167340Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Build with Gradle	2026-02-17T11:35:22.4169440Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.18-8/x64
+build	Build with Gradle	2026-02-17T11:35:22.4171105Z ##[endgroup]
+build	Build with Gradle	2026-02-17T11:35:23.8270559Z Downloading https://services.gradle.org/distributions/gradle-8.14.4-bin.zip
+build	Build with Gradle	2026-02-17T11:35:26.3554438Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%..............100%
+build	Build with Gradle	2026-02-17T11:35:27.7918139Z 
+build	Build with Gradle	2026-02-17T11:35:27.7919106Z Welcome to Gradle 8.14.4!
+build	Build with Gradle	2026-02-17T11:35:27.7920058Z 
+build	Build with Gradle	2026-02-17T11:35:27.7923184Z Here are the highlights of this release:
+build	Build with Gradle	2026-02-17T11:35:27.7925266Z  - Java 24 support
+build	Build with Gradle	2026-02-17T11:35:27.7932753Z  - GraalVM Native Image toolchain selection
+build	Build with Gradle	2026-02-17T11:35:27.7933883Z  - Enhancements to test reporting
+build	Build with Gradle	2026-02-17T11:35:27.7934965Z  - Build Authoring improvements
+build	Build with Gradle	2026-02-17T11:35:27.7936934Z 
+build	Build with Gradle	2026-02-17T11:35:27.7937379Z For more details see https://docs.gradle.org/8.14.4/release-notes.html
+build	Build with Gradle	2026-02-17T11:35:27.7937936Z 
+build	Build with Gradle	2026-02-17T11:35:27.8912318Z Starting a Gradle Daemon (subsequent builds will be faster)
+build	Build with Gradle	2026-02-17T11:36:21.0917068Z 
+build	Build with Gradle	2026-02-17T11:36:21.0961060Z > Configure project :
+build	Build with Gradle	2026-02-17T11:36:21.0979411Z w: file:///home/runner/work/ProFence/ProFence/build.gradle.kts:19:24: 'getter for buildDir: File!' is deprecated. Deprecated in Java
+build	Build with Gradle	2026-02-17T11:36:26.5912411Z 
+build	Build with Gradle	2026-02-17T11:36:26.5917793Z > Task :app:preBuild UP-TO-DATE
+build	Build with Gradle	2026-02-17T11:36:26.5918783Z > Task :app:preDebugBuild UP-TO-DATE
+build	Build with Gradle	2026-02-17T11:36:26.5922470Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+build	Build with Gradle	2026-02-17T11:36:26.5923597Z > Task :app:checkKotlinGradlePluginConfigurationErrors
+build	Build with Gradle	2026-02-17T11:36:41.5923362Z > Task :app:generateDebugResValues
+build	Build with Gradle	2026-02-17T11:36:41.6929773Z > Task :app:checkDebugAarMetadata
+build	Build with Gradle	2026-02-17T11:36:41.7923827Z > Task :app:mapDebugSourceSetPaths
+build	Build with Gradle	2026-02-17T11:36:41.7925240Z > Task :app:generateDebugResources
+build	Build with Gradle	2026-02-17T11:36:43.0913659Z > Task :app:packageDebugResources
+build	Build with Gradle	2026-02-17T11:36:43.1913982Z > Task :app:mergeDebugResources
+build	Build with Gradle	2026-02-17T11:36:44.0925366Z > Task :app:createDebugCompatibleScreenManifests
+build	Build with Gradle	2026-02-17T11:36:44.0929743Z > Task :app:extractDeepLinksDebug
+build	Build with Gradle	2026-02-17T11:36:44.0930281Z > Task :app:parseDebugLocalResources
+build	Build with Gradle	2026-02-17T11:36:44.3912817Z 
+build	Build with Gradle	2026-02-17T11:36:44.3918295Z > Task :app:processDebugMainManifest
+build	Build with Gradle	2026-02-17T11:36:44.3995949Z package="com.profence.app" found in source AndroidManifest.xml: /home/runner/work/ProFence/ProFence/app/src/main/AndroidManifest.xml.
+build	Build with Gradle	2026-02-17T11:36:44.3999787Z Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+build	Build with Gradle	2026-02-17T11:36:44.4001730Z Recommendation: remove package="com.profence.app" from the source AndroidManifest.xml: /home/runner/work/ProFence/ProFence/app/src/main/AndroidManifest.xml.
+build	Build with Gradle	2026-02-17T11:36:44.4919369Z 
+build	Build with Gradle	2026-02-17T11:36:44.4925990Z > Task :app:processDebugManifest
+build	Build with Gradle	2026-02-17T11:36:46.0917815Z > Task :app:javaPreCompileDebug
+build	Build with Gradle	2026-02-17T11:36:46.0929915Z > Task :app:mergeDebugShaders
+build	Build with Gradle	2026-02-17T11:36:46.0930463Z > Task :app:compileDebugShaders NO-SOURCE
+build	Build with Gradle	2026-02-17T11:36:46.0931024Z > Task :app:generateDebugAssets UP-TO-DATE
+build	Build with Gradle	2026-02-17T11:36:46.1939581Z > Task :app:mergeDebugAssets
+build	Build with Gradle	2026-02-17T11:36:46.1940566Z > Task :app:compressDebugAssets
+build	Build with Gradle	2026-02-17T11:36:46.1941286Z > Task :app:desugarDebugFileDependencies
+build	Build with Gradle	2026-02-17T11:36:48.2911735Z > Task :app:mergeDebugJniLibFolders
+build	Build with Gradle	2026-02-17T11:36:48.3911622Z > Task :app:checkDebugDuplicateClasses
+build	Build with Gradle	2026-02-17T11:36:48.3917502Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+build	Build with Gradle	2026-02-17T11:37:14.4918088Z > Task :app:processDebugManifestForPackage
+build	Build with Gradle	2026-02-17T11:37:18.3911455Z > Task :app:mergeExtDexDebug
+build	Build with Gradle	2026-02-17T11:38:03.0912728Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+build	Build with Gradle	2026-02-17T11:38:03.0918756Z > Task :app:mergeLibDexDebug
+build	Build with Gradle	2026-02-17T11:38:03.5911225Z > Task :app:processDebugResources
+build	Build with Gradle	2026-02-17T11:38:04.2913816Z > Task :app:validateSigningDebug
+build	Build with Gradle	2026-02-17T11:38:14.6911597Z > Task :app:writeDebugAppMetadata
+build	Build with Gradle	2026-02-17T11:38:14.6917063Z > Task :app:writeDebugSigningConfigVersions
+build	Build with Gradle	2026-02-17T11:38:19.0941501Z > Task :app:kspDebugKotlin
+build	Build with Gradle	2026-02-17T11:38:24.1910576Z 
+build	Build with Gradle	2026-02-17T11:38:24.1912833Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/data/repository/GeofenceRepository.kt:9:14 Unresolved reference: inject
+build	Build with Gradle	2026-02-17T11:38:24.1917951Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/geofence/GeofenceBroadcastReceiver.kt:19:28 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type GeofencingEvent?
+build	Build with Gradle	2026-02-17T11:38:24.1920725Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/geofence/GeofenceBroadcastReceiver.kt:20:75 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type GeofencingEvent?
+build	Build with Gradle	2026-02-17T11:38:24.1923585Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/geofence/GeofenceBroadcastReceiver.kt:24:49 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type GeofencingEvent?
+build	Build with Gradle	2026-02-17T11:38:24.1926459Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/geofence/GeofenceBroadcastReceiver.kt:25:50 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type GeofencingEvent?
+build	Build with Gradle	2026-02-17T11:38:24.1929319Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/permissions/PermissionFlow.kt:36:21 @Composable invocations can only happen from the context of a @Composable function
+build	Build with Gradle	2026-02-17T11:38:24.1931478Z e: file:///home/runner/work/ProFence/ProFence/app/src/main/java/com/profence/app/ui/logs/LogsScreen.kt:12:32 Unresolved reference: collectAsState
+build	Build with Gradle	2026-02-17T11:38:24.1932677Z > Task :app:compileDebugKotlin FAILED
+build	Build with Gradle	2026-02-17T11:38:24.1933012Z 
+build	Build with Gradle	2026-02-17T11:38:24.1933167Z FAILURE: Build failed with an exception.
+build	Build with Gradle	2026-02-17T11:38:24.1933461Z 
+build	Build with Gradle	2026-02-17T11:38:24.1933470Z 
+build	Build with Gradle	2026-02-17T11:38:24.1934224Z [Incubating] Problems report is available at: file:///home/runner/work/ProFence/ProFence/build/reports/problems/problems-report.html
+build	Build with Gradle	2026-02-17T11:38:24.1975835Z * What went wrong:
+build	Build with Gradle	2026-02-17T11:38:24.1976067Z 
+build	Build with Gradle	2026-02-17T11:38:24.1976563Z Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+build	Build with Gradle	2026-02-17T11:38:24.1977755Z Execution failed for task ':app:compileDebugKotlin'.
+build	Build with Gradle	2026-02-17T11:38:24.1979032Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+build	Build with Gradle	2026-02-17T11:38:24.1980214Z    > Compilation error. See log for more details
+build	Build with Gradle	2026-02-17T11:38:24.1980565Z 
+build	Build with Gradle	2026-02-17T11:38:24.1980666Z * Try:
+build	Build with Gradle	2026-02-17T11:38:24.1981049Z > Run with --stacktrace option to get the stack trace.
+build	Build with Gradle	2026-02-17T11:38:24.1981648Z > Run with --info or --debug option to get more log output.
+build	Build with Gradle	2026-02-17T11:38:24.1982197Z > Run with --scan to get full insights.
+build	Build with Gradle	2026-02-17T11:38:24.1982694Z > Get more help at https://help.gradle.org.
+build	Build with Gradle	2026-02-17T11:38:24.1983027Z 
+build	Build with Gradle	2026-02-17T11:38:24.1983140Z BUILD FAILED in 3m
+build	Build with Gradle	2026-02-17T11:38:24.1983340Z 
+build	Build with Gradle	2026-02-17T11:38:24.1984051Z You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+build	Build with Gradle	2026-02-17T11:38:24.1984931Z 
+build	Build with Gradle	2026-02-17T11:38:24.1985796Z For more on this, please refer to https://docs.gradle.org/8.14.4/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+build	Build with Gradle	2026-02-17T11:38:24.2919912Z 28 actionable tasks: 28 executed
+build	Build with Gradle	2026-02-17T11:38:24.7860416Z ##[error]Process completed with exit code 1.
+build	Post set up JDK 17	﻿2026-02-17T11:38:24.7990029Z Post job cleanup.
+build	Post Run actions/checkout@v4	﻿2026-02-17T11:38:24.9876889Z Post job cleanup.
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.0965917Z [command]/usr/bin/git version
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1010950Z git version 2.52.0
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1057311Z Temporarily overriding HOME='/home/runner/work/_temp/745a29ad-c15b-40c7-aa61-d5e99c9286cb' before making global git config changes
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1058657Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1064204Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/ProFence/ProFence
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1104921Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1142332Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1412572Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1438939Z http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1452471Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1488286Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1733168Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Run actions/checkout@v4	2026-02-17T11:38:25.1767879Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-02-17T11:38:25.2113363Z Cleaning up orphan processes
+build	Complete job	2026-02-17T11:38:25.2400747Z Terminate orphan process: pid (2317) (java)
+build	Complete job	2026-02-17T11:38:25.2489957Z Terminate orphan process: pid (2523) (java)

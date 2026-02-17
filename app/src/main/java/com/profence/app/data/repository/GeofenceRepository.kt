@@ -6,7 +6,7 @@ import com.profence.app.data.db.LogDao
 import com.profence.app.data.db.LogEntry
 import com.profence.app.geofence.GeofenceManager
 import kotlinx.coroutines.flow.Flow
-import javax.inject.Inject
+
 
 class GeofenceRepository(
     private val geofenceDao: GeofenceDao,

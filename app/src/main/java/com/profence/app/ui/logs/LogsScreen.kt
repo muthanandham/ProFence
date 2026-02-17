@@ -9,7 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.profence.app.data.db.LogEntry
 import com.profence.app.ui.ProFenceViewModel
-import kotlinx.coroutines.flow.collectAsState
+import androidx.compose.runtime.collectAsState
 import androidx.compose.foundation.layout.*
 import java.util.Date
 

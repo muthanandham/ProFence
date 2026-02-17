@@ -1,10 +1,12 @@
 # ProFence Testing Instructions
 
-## Running the App
-1. Open Android Studio.
-2. Select **Open** and navigate to `/home/laptop-h35/Desktop/code/AI/x-prod`.
-3. Wait for Gradle to sync (this may take a few minutes as it downloads dependencies).
-4. Run the app on an Emulator (API 30+ recommended) with **Google Play Store** support.
+## Running the App (No Android Studio)
+1. Go to your GitHub repository: [ProFence Actions](https://github.com/muthanandham/ProFence/actions)
+2. Click on the latest **Android Build** workflow run.
+3. Scroll down to the **Artifacts** section.
+4. Download the **debug-apk** zip file.
+5. Extract the zip file to find `app-debug.apk`.
+6. Transfer this file to your Android phone and install it.
 
 ## Feature Testing
 
